@@ -1,20 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
-import { StoreProvider } from './Store';
-import './index.css';
-import HomePage from './HomePage';
-import FavPage from './FavPage';
-import { Router } from '@reach/router';
+import App from './components/App.jsx';
 
-ReactDOM.render(
-  <StoreProvider>
-    <Router>
-      <App path='/'>
-        <HomePage path='/' />
-        <FavPage path='/faves' />
-      </App>
-    </Router>
-  </StoreProvider>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
